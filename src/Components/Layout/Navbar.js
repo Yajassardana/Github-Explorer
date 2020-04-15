@@ -1,22 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-class Navbar extends React.Component {
-  static defaultProps = {
-    title:'Github Finder',
-    icon:'fab fa-github'
-  };
-  static propTypes = {
-    title: PropTypes.string.isRequired,
-    icon:PropTypes.string.isRequired
-  };
-  render () {
+const Navbar=({icon,title})=> {
     return(
       <nav className="navbar bg-primary">
-        <h1><i className={this.props.icon}></i> {this.props.title}
+        <h1><i className={icon}></i> {title}
         </h1>
       </nav>
     );
-  }
 }
-
+ Navbar.defaultProps = {//Navbar. instead of static for function using hooks approach
+  title:'Github Finder',
+  icon:'fab fa-github'
+};
+Navbar.propTypes = {//same as above
+  title: PropTypes.string.isRequired,
+  icon:PropTypes.string.isRequired
+};
 export default Navbar;
