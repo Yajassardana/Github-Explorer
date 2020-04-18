@@ -346,10 +346,38 @@ table th {
   background: var(--light-color);
 }
 
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.7rem 2rem;
+  z-index: 1;
+  width: 100%;
+  opacity: 0.9;
+  margin-bottom: 1rem;
+}
 
+.navbar ul {
+  display: flex;
+}
+
+.navbar a {
+  color: #fff;
+  padding: 0.45rem;
+  margin: 0 0.25rem;
+}
+
+.navbar a:hover {
+  color: var(--light-color);
+}
+
+.navbar .welcome span {
+  margin-right: 0.6rem;
+}
 
 /* Mobile Styles */
-
+@media (max-width: 700px) {
   .hide-sm {
     display: none;
   }
@@ -372,3 +400,14 @@ table th {
   .lead {
     font-size: 1rem;
   }
+  /* Navbar */
+   .navbar {
+     display: block;
+     text-align: center;
+   }
+
+   .navbar ul {
+     text-align: center;
+     justify-content: center;
+   }
+ }
