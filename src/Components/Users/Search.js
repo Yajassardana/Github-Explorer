@@ -1,40 +1,34 @@
-import React from 'react'
+import React,{useState} from 'react'
 import PropTypes from 'prop-types'
-class Search extends React.Component {
-  static propTypes={
-    searchUsers:PropTypes.func.isRequired,
-    clearUsers:PropTypes.func.isRequired,
-    filled:PropTypes.bool.isRequired,
-    setAlert:PropTypes.func.isRequired
-  };
-  state={
-    text:''
-  };
-  onSubmit=(e)=>{
+const Search =({searchUsers, clearUsers, filled, setAlert})=> {
+  const [text,setText]  =  useState('');//State ka naam, set method for that state and then setStae ke andar uss state ki default value
+  const onSubmit=(e)=>{
     e.preventDefault();
-    if(this.state.text==='')
+    if(text==='')
     {
-      this.props.setAlert('Please enter something','light');
+      setAlert('Please enter something','light');
     }
     else {
-      this.props.searchUsers(this.state.text);
-      this.setState({text:''});
+      searchUsers(text);
+      setText('');
     }
   };
-  onChange=(e)=>this.setState({[e.target.name]:e.target.value});
-  render () {
-    const {filled,clearUsers}= this.props;
+  const onChange=(e)=>setText(e.target.value);
     return(
       <div className='text-center'>
-        <form className="form"  onSubmit={this.onSubmit}>
-          <input type="text" placeholder="Search Users" value={this.state.text} name='text' onChange={this.onChange}/>
+        <form className="form"  onSubmit={onSubmit}>
+          <input type="text" placeholder="Search Users" value={text} name='text' onChange={onChange}/>
           <input type="submit" value='search' className='btn btn-dark btn-block'/>
         </form>
         {filled?<button className="btn-block btn-light btn " onClick={clearUsers}>clear</button>:<></>}
       </div>
     );
-
-  }
 }
+Search.propTypes={
+  searchUsers:PropTypes.func.isRequired,
+  clearUsers:PropTypes.func.isRequired,
+  filled:PropTypes.bool.isRequired,
+  setAlert:PropTypes.func.isRequired
+};
 
 export default Search;
