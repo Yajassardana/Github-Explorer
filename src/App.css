@@ -3,6 +3,7 @@
 /* Global Styles */
 :root {
   --primary-color: #dc3545;
+  --secondary-color:dodgerblue;
   --dark-color: #333333;
   --light-color: #f4f4f4;
   --danger-color: #dc3545;
@@ -250,6 +251,10 @@ img {
 .badge-primary,
 .alert-primary {
   background: var(--primary-color);
+  color: #fff;
+}
+.bg-secondary{
+  background-color: var(--secondary-color);
   color: #fff;
 }
 
