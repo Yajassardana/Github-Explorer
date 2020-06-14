@@ -64,7 +64,7 @@ const App=()=>{
 };
 
       return (
-        <HashRouter basename="/GithubFinder/">
+        <HashRouter basename="/">
           <div className = "App">
             <Navbar/>
             <div className="container">
