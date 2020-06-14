@@ -11,7 +11,7 @@ const Navbar=({icon,title})=> {
             <Link to='/GithubFinder'>Home</Link>
           </li>
           <li>
-            <Link to='about'>About</Link>
+            <Link to='/GithubFinder/about'>About</Link>
           </li>
         </ul>
       </nav>
