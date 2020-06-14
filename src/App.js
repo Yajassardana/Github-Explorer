@@ -7,7 +7,7 @@ import axios from 'axios'
 import Search from './Components/Users/Search.js';
 import Alert from './Components/Layout/Alert.js';
 import About from './Components/pages/about.js';
-import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
+import {BrowserRouter as Router,HashRouter,Switch,Route} from 'react-router-dom';
 const App=()=>{
   const [users,setUsers]     =useState([]);
   const [user,setUser]       =useState({});
@@ -64,7 +64,7 @@ const App=()=>{
 };
 
       return (
-        <Router>
+        <HashRouter basename="/GithubFinder/">
           <div className = "App">
             <Navbar/>
             <div className="container">
@@ -72,7 +72,7 @@ const App=()=>{
             <Switch>
                 <Route
                exact
-               path='/GithubFinder/'
+               path='/'
                render={props => (
                  <Fragment>
                    <Search
@@ -84,7 +84,7 @@ const App=()=>{
                  </Fragment>
                )}
              />
-          <Route exact path='/GithubFinder/about' component={About} />
+          <Route exact path='/about' component={About} />
             <Route
            exact
            path='/user/:login'
@@ -99,7 +99,7 @@ const App=()=>{
       </Switch>
             </div>
           </div>
-        </Router>
+        </HashRouter>
   );
 }
 
