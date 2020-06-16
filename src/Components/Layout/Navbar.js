@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {Link,HashRouter} from 'react-router-dom';
 const Navbar=({icon,title})=> {
     return(
-      <nav className="navbar bg-secondary">
+      <nav className="navbar fix bg-secondary">
         <h1><i className={icon}></i> {title}
         </h1>
         <ul>

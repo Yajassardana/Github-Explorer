@@ -358,9 +358,11 @@ table th {
   align-items: center;
   padding: 0.7rem 2rem;
   z-index: 1;
-  width: 100%;
-  opacity: 0.9;
-  margin-bottom: 1rem;
+}
+.fix{ 
+   position: fixed;
+   top: 0; 
+   width: 100%; 
 }
 
 .navbar ul {
@@ -375,6 +377,9 @@ table th {
 
 .navbar a:hover {
   color: var(--light-color);
+}
+.top{
+  margin-top:9%;
 }
 
 .navbar .welcome span {

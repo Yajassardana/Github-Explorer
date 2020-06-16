@@ -15,7 +15,7 @@ const Search =({searchUsers, clearUsers, filled, setAlert})=> {
   };
   const onChange=(e)=>setText(e.target.value);
     return(
-      <div className='text-center'>
+      <div className='text-center top'>
         <form className="form"  onSubmit={onSubmit}>
           <input type="text" placeholder="Search Users" value={text} name='text' onChange={onChange}/>
           <input type="submit" value='search' className='btn btn-dark btn-block'/>
