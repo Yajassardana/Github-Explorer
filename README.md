@@ -11,7 +11,8 @@ Github Explorer
 ### Search Users throughout github
 ![Search](https://github.com/Yajassardana/Github-Explorer/blob/master/README/Screenshot%20(71).png)
 ### Live Demo: https://yajassardana.github.io/Github-Explorer/#/
-
+### Detailed User Profiles -
+![User](https://github.com/Yajassardana/Github-Explorer/blob/master/README/Screenshot%20(100).png) 
 ### Search Results
 ![Results](https://github.com/Yajassardana/Github-Explorer/blob/master/README/Screenshot%20(70).png)
 ### About the App
